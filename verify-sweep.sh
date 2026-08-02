@@ -11,7 +11,7 @@
 # Deferred proofs are retried on a second pass. Report -> BUILD_STATUS.md.
 set -u
 R="$HOME/ghq/github.com/openai/ten-proofs"
-SENTINEL="$HOME/ghq/github.com/aygp-dr/mini-setup/scripts/training-sentinel.sh"
+SENTINEL="$HOME/ghq/github.com/aygp-dr/jwalsh/build-a-large-language-model/ops/training-sentinel.sh"
 LEAN="$HOME/.elan/bin/lake"
 LOG=/tmp/tenproofs-sweep.log
 REPORT="$R/BUILD_STATUS.md"
