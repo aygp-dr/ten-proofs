@@ -37,7 +37,7 @@ sorries() {
 # build one target under the memory watchdog. echoes result token.
 build_watched() {
   local t=$1
-  nice -n 15 "$LEAN" build "$t" >>"$LOG" 2>&1 &
+  taskpolicy -b nice -n 15 "$LEAN" build "$t" >>"$LOG" 2>&1 &
   local bpid=$! crit=0
   while kill -0 "$bpid" 2>/dev/null; do
     local f; f=$(freemem)
